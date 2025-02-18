@@ -31,10 +31,15 @@ void real_solve(double a, double b, double D) {
 	double x2 = (-b - sqrt(D)) / (2 * a);
 	cout << "Two real solutions: \n x1 = " << x1 << "\n x2 = " << x2 << endl;
 }
+
+void single_solve(double a, double b) {
+	cout << "One real solution, x = " << (-b) / (2 * a) << endl;
+}
+
 int main() {
 	double a, b, c;
 	coefficients(a, b, c);
 	cout << "\n" << discriminant(a, b, c) << endl;
-	real_solve(a, b, discriminant(a, b, c));
+	single_solve(a, b);
 	return 0;
 }
